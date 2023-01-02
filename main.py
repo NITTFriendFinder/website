@@ -39,13 +39,18 @@ mycursor = mydb.cursor()
 def hello_world():
     return render_template('home_page.html')
 
-@app.route('/QP', methods=["GET", "POST"])
+@app.route('/qp', methods=["GET", "POST"])
 def prev_papers():
     if request.method == "GET":
         return render_template("qp_GET.html")
     if request.method == "POST":
-        value = str(request.form.get('value'))
-        return value
+        value = request.form.get('value')
+        # return value
+        mycursor.execute("SELECT * FROM test")
+        # print(mycursor.fetchall())
+        return mycursor.fetchall()
+
+
 
 if __name__ == '__main__':
     app.run()

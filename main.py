@@ -1,80 +1,51 @@
+import os
 from wsgiref.simple_server import make_server
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+# from flask_mysqldb import MySQL
+
+
 app = Flask(__name__)
-app.config['DEBUG'] = True
-app.config['PORT'] = 1234
+app.config.update(
+    TESTING=True,
+    DEBUG= True,
+    # FLASK_ENV='DEV'
+    SERVER_NAME="localhost:5000"
+    # SECRET_KEY='GDtfDCFYjD',
+)
+
+
+
+
+import mysql.connector
+mydb = mysql.connector.connect(
+  host="sql6.freemysqlhosting.net",
+  user="sql6587674",
+  password="XgvFNgAXeW",
+  database="sql6587674"
+
+)
+mycursor = mydb.cursor()
+
+
+
+
+
+#     # AWS Secrets
+#     AWS_SECRET_KEY = environ.get('AWS_SECRET_KEY')
+#     AWS_KEY_ID = environ.get('AWS_KEY_ID')
 
 
 @app.route('/')
 def hello_world():
-    # return "hi from backend"
-    return render_template('index.html')
+    return render_template('home_page.html')
 
-
-
-'''
-@app.route('/put')
-def function():
-    if request.args:
-        req = request.args
-        return " ".join(f"{k} : {v}" for k, v in req.items())
-    return "nothing"
-
-
-content = {
-    "bruh" : {
-        "key1" : "value1",
-        "key2" : "value2"
-    }
-}
-@app.route('/content')
-def content():
-    response = make_response(jsonify(content), 200)
-    return response
-
-content = {
-    "bruh1" : {
-        "key1" : "value1",
-        "key2" : "value2"
-    },
-    "bruh2" : {
-        "key1" : "value1",
-        "key2" : "value2"
-    }
-}
-@app.route("/content/<contentid>")
-def orderid(contentid):
-    if contentid in content:
-        response = make_response(jsonify(content[contentid]), 200)
-        return response
-    return "order not found"
-
-@app.route("/content/<contentid>", methods=["POST"])
-def post_order_details(contentid):
-    req = request.get_json()
-    if contentid in content:
-        response = make_response(jsonify({"error" : "content id already exists"}), 400)
-        return response
-    content.update({contentid:req})
-    response = make_response(jsonify({"message" : "new content created"}), 201)
-    return response
-
-
-@app.route('/setcookie', methods = ['POST', 'GET'])
-def setcookie():
-    if request.method == 'POST':
-        user = request.form['nm']
-        resp = make_response(render_template('readcookie.html'))
-        resp.set_cookie('userID', user)
-        return resp
-    return "no cookie found"
-
-@app.route('/getcookie')
-def getcookie():
-   name = request.cookies.get('userID')
-   return '<h1>welcome ' + name + '</h1>'
-'''
-
+@app.route('/QP', methods=["GET", "POST"])
+def prev_papers():
+    if request.method == "GET":
+        return render_template("qp_GET.html")
+    if request.method == "POST":
+        value = str(request.form.get('value'))
+        return value
 
 if __name__ == '__main__':
     app.run()

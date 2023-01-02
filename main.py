@@ -13,7 +13,7 @@ app.config.update(
     # SECRET_KEY='GDtfDCFYjD',
 )
 
-
+skjnvksj
 
 
 import mysql.connector

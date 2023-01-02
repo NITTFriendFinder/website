@@ -13,7 +13,7 @@ app.config.update(
     # SECRET_KEY='GDtfDCFYjD',
 )
 
-skjnvksj
+
 
 
 import mysql.connector
@@ -48,7 +48,13 @@ def prev_papers():
         # return value
         mycursor.execute("SELECT * FROM test")
         # print(mycursor.fetchall())
-        return mycursor.fetchall()
+        final = []
+        for i in mycursor.fetchall():
+            if value in i[0] or i[1]:
+                final.append(i)
+        for i in range(100-len(final)):
+            final.append([])
+        return render_template("qp_POST.html", link1=final[0][1], content1=final[0][0])
 
 
 

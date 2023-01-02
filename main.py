@@ -1,10 +1,13 @@
 from wsgiref.simple_server import make_server
-from flask import Flask, jsonify, make_response, render_template, request, request_started
+from flask import Flask, render_template
 app = Flask(__name__)
+app.config['DEBUG'] = True
+app.config['PORT'] = 1234
 
 
 @app.route('/')
 def hello_world():
+    # return "hi from backend"
     return render_template('index.html')
 
 

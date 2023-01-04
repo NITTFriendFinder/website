@@ -1,16 +1,37 @@
 import os
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="sql6.freemysqlhosting.net",
-  user="sql6587674",
-  password="XgvFNgAXeW",
-  database="sql6587674"
+# mydb = mysql.connector.connect(
+#   host="sql6.freemysqlhosting.net",
+#   user="sql6587674",
+#   password="XgvFNgAXeW",
+#   database="sql6587674"
+# )
 
-)
-
-# exit()
+import sqlite3
+mydb = sqlite3.connect(database="localhost.db")
 mycursor = mydb.cursor()
+
+mycursor.execute("DROP TABLE question_paper")
+mycursor.execute("CREATE TABLE IF NOT EXISTS question_paper(u_id INT, year VARCHAR(4), dept VARCHAR(10), prof VARCHAR(20), courseID VARCHAR(5), exam VARCHAR(10), link VARCHAR(30))")
+
+
+mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("1", "2022", "CSE", "MAIR31", "jitraj", "CT1", "https://drive.google.com/file/d/1_hg8BL9FpM924UCJpws_sUf-j46J0A48/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("2", "2022", "CSE", "CSPE32", "sitara", "CT1", "https://drive.google.com/file/d/1_7XUj-HucGRv-j-2hyW0ZtFTJOoIUMZf/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("3", "2022", "CSE", "CSPC33", "", "CT1", "https://drive.google.com/file/d/1ttEagKvyW5evtcaezON31QHq24UckXzy/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("4", "2022", "CSE", "CSPC32", "sai krishna", "CT1", "https://drive.google.com/file/d/1hO5JU9CDU9Ujatn2IsqXNocVtS-hPYg3/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("5", "2022", "CSE", "CSPC34", "", "CT1", "https://drive.google.com/file/d/1NckMlLJe2TBn-SKGwlS6LLVYu8fVkGk_/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("6", "2022", "CSE", "CSPC31", "bala krishna", "CT1", "https://drive.google.com/file/d/108YTU5S-SIo55wWCsNPMIhEGmJMGzMR6/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("7", "2022", "CSE", "CSPC34", "", "CT2", "https://drive.google.com/file/d/1rOqrjpExJvIxx3BgFldnupxjKPWtBsGF/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("8", "2022", "CSE", "CSPC33", "", "CT2", "https://drive.google.com/file/d/1MXNx7KL_AdHvW0o95l4U5N0QhZaZu9FF/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("9", "2022", "CSE", "CSPE32", "sitara", "CT2", "https://drive.google.com/file/d/16KEhFB8Js69BB6-wAcBteYkj5kpx4yio/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("10", "2022", "CSE", "CSPC31", "bala krishna", "CT2", "https://drive.google.com/file/d/1-SEWDK1269X1HCCISP4l1aunjcLi1ppj/view?usp=share_link")''')
+
+
+
+mydb.commit()
+exit()
+
 
 
 
@@ -29,7 +50,7 @@ mycursor.execute("SELECT * FROM test")
 for x in mycursor.fetchall():
     print(x)'''
 
-
+mycursor.execute("CREATE TABLE question_paper(u_id INT, year VARCHAR(4), dept VARCHAR(10), prof VARCHAR(20), courseID VARCHAR(5), link VARCHAR(30))")
 
 val = '''("1", "2022", "CSE", "MAIR31", "jitraj", "CT1", "https://drive.google.com/file/d/1_hg8BL9FpM924UCJpws_sUf-j46J0A48/view?usp=share_link")'''
 mycursor.execute("INSERT INTO question_paper(u_id, year, dept, prof, courseID, link) VALUES" + val)

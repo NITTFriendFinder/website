@@ -81,12 +81,10 @@ def prev_papers():
         exam = request.form.get('exam')
         year = request.form.get('year')
         prof = request.form.get('prof')
-        print(sem, dept, courseid, exam, year, prof)
         final = list(mycursor.execute("SELECT * FROM question_paper"))
         # u_id, sem, dept, courseid, exam, year, prof, link
         i = 0
         while i<len(final):
-            print(final[i][5])
             if sem!="blank" and sem != final[i][1]:
                 final.pop(i)
                 continue

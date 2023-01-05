@@ -86,3 +86,19 @@ mydb.commit()
 mycursor.execute("SELECT * FROM test")
 for x in mycursor.fetchall():
   print(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

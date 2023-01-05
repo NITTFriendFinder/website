@@ -11,24 +11,196 @@
     <body>
         <div class="form_holder">
             <form onsubmit="prev_papers()" method = "POST">
+                <label style="font-size: 22px;"><b>semester</b>  </label>
+                <select class="semester" type = 'text' name = 'semester' id='semester'/>
+                    <option value="blank">SELECT</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <br><br><br>
+
                 <label style="font-size: 22px;"><b>dept</b>  </label>
-                <input class="dept" type = 'text' name = 'dept' id='dept'/>
+                <select class="dept" type = 'text' name = 'dept' id='dept'/>
+                    <option value="blank">SELECT</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ICE">ICE</option>
+                    <option value="MECH">MECH</option>
+                </select>
                 <br><br><br>
                 
                 <label style="font-size: 22px;"><b>courseid</b>  </label>
-                <input class="courseid" type = 'text' name = 'courseid' id='courseid'/>
+                <select class="courseid" type = 'text' name = 'courseid' id='courseid'/>
+                    <option value="blank">SELECT</option>
+                    <option value="courseid1">{{courseid1}}</option>
+                    <option value="courseid2">{{courseid2}}</option>
+                    <option value="courseid3">{{courseid3}}</option>
+                    <option value="courseid4">{{courseid4}}</option>
+                    <option value="courseid5">{{courseid5}}</option>
+                    <option value="courseid6">{{courseid6}}</option>
+                    <option value="courseid7">{{courseid7}}</option>
+                    <option value="courseid8">{{courseid8}}</option>
+                    <option value="courseid9">{{courseid9}}</option>
+                    <option value="courseid10">{{courseid10}}</option>
+                    <option value="courseid11">{{courseid11}}</option>
+                    <option value="courseid12">{{courseid12}}</option>
+                    <option value="courseid13">{{courseid13}}</option>
+                    <option value="courseid14">{{courseid14}}</option>
+                    <option value="courseid15">{{courseid15}}</option>
+                    <option value="courseid16">{{courseid16}}</option>
+                    <option value="courseid17">{{courseid17}}</option>
+                    <option value="courseid18">{{courseid18}}</option>
+                    <option value="courseid19">{{courseid19}}</option>
+                    <option value="courseid20">{{courseid20}}</option>
+                    <option value="courseid21">{{courseid21}}</option>
+                    <option value="courseid22">{{courseid22}}</option>
+                    <option value="courseid23">{{courseid23}}</option>
+                    <option value="courseid24">{{courseid24}}</option>
+                    <option value="courseid25">{{courseid25}}</option>
+                    <option value="courseid26">{{courseid26}}</option>
+                    <option value="courseid27">{{courseid27}}</option>
+                    <option value="courseid28">{{courseid28}}</option>
+                    <option value="courseid29">{{courseid29}}</option>
+                    <option value="courseid30">{{courseid30}}</option>
+                    <option value="courseid31">{{courseid31}}</option>
+                    <option value="courseid32">{{courseid32}}</option>
+                    <option value="courseid33">{{courseid33}}</option>
+                    <option value="courseid34">{{courseid34}}</option>
+                    <option value="courseid35">{{courseid35}}</option>
+                    <option value="courseid36">{{courseid36}}</option>
+                    <option value="courseid37">{{courseid37}}</option>
+                    <option value="courseid38">{{courseid38}}</option>
+                    <option value="courseid39">{{courseid39}}</option>
+                    <option value="courseid40">{{courseid40}}</option>
+                    <option value="courseid41">{{courseid41}}</option>
+                    <option value="courseid42">{{courseid42}}</option>
+                    <option value="courseid43">{{courseid43}}</option>
+                    <option value="courseid44">{{courseid44}}</option>
+                    <option value="courseid45">{{courseid45}}</option>
+                    <option value="courseid46">{{courseid46}}</option>
+                    <option value="courseid47">{{courseid47}}</option>
+                    <option value="courseid48">{{courseid48}}</option>
+                    <option value="courseid49">{{courseid49}}</option>
+                    <option value="courseid50">{{courseid50}}</option>
+                    <option value="courseid51">{{courseid51}}</option>
+                    <option value="courseid52">{{courseid52}}</option>
+                    <option value="courseid53">{{courseid53}}</option>
+                    <option value="courseid54">{{courseid54}}</option>
+                    <option value="courseid55">{{courseid55}}</option>
+                    <option value="courseid56">{{courseid56}}</option>
+                    <option value="courseid57">{{courseid57}}</option>
+                    <option value="courseid58">{{courseid58}}</option>
+                    <option value="courseid59">{{courseid59}}</option>
+                    <option value="courseid60">{{courseid60}}</option>
+                    <option value="courseid61">{{courseid61}}</option>
+                    <option value="courseid62">{{courseid62}}</option>
+                    <option value="courseid63">{{courseid63}}</option>
+                    <option value="courseid64">{{courseid64}}</option>
+                    <option value="courseid65">{{courseid65}}</option>
+                    <option value="courseid66">{{courseid66}}</option>
+                    <option value="courseid67">{{courseid67}}</option>
+                    <option value="courseid68">{{courseid68}}</option>
+                    <option value="courseid69">{{courseid69}}</option>
+                    <option value="courseid70">{{courseid70}}</option>
+                    <option value="courseid71">{{courseid71}}</option>
+                    <option value="courseid72">{{courseid72}}</option>
+                    <option value="courseid73">{{courseid73}}</option>
+                    <option value="courseid74">{{courseid74}}</option>
+                    <option value="courseid75">{{courseid75}}</option>
+                    <option value="courseid76">{{courseid76}}</option>
+                    <option value="courseid77">{{courseid77}}</option>
+                    <option value="courseid78">{{courseid78}}</option>
+                    <option value="courseid79">{{courseid79}}</option>
+                    <option value="courseid80">{{courseid80}}</option>
+                    <option value="courseid81">{{courseid81}}</option>
+                    <option value="courseid82">{{courseid82}}</option>
+                    <option value="courseid83">{{courseid83}}</option>
+                    <option value="courseid84">{{courseid84}}</option>
+                    <option value="courseid85">{{courseid85}}</option>
+                    <option value="courseid86">{{courseid86}}</option>
+                    <option value="courseid87">{{courseid87}}</option>
+                    <option value="courseid88">{{courseid88}}</option>
+                    <option value="courseid89">{{courseid89}}</option>
+                    <option value="courseid90">{{courseid90}}</option>
+                    <option value="courseid91">{{courseid91}}</option>
+                    <option value="courseid92">{{courseid92}}</option>
+                    <option value="courseid93">{{courseid93}}</option>
+                    <option value="courseid94">{{courseid94}}</option>
+                    <option value="courseid95">{{courseid95}}</option>
+                    <option value="courseid96">{{courseid96}}</option>
+                    <option value="courseid97">{{courseid97}}</option>
+                    <option value="courseid98">{{courseid98}}</option>
+                    <option value="courseid99">{{courseid99}}</option>
+                    <option value="courseid100">{{courseid100}}</option>
+                </select>
                 <br><br><br>
                 
                 <label style="font-size: 22px;"><b>exam</b>  </label>
-                <input class="exam" type = 'text' name = 'exam' id='exam'/>
+                <select class="exam" type = 'text' name = 'exam' id='exam'/>
+                    <option value="blank">SELECT</option>
+                    <option value="CT1">CT1</option>
+                    <option value="CT2">CT2</option>
+                    <option value="endsem">end sem</option>
+                </select>
                 <br><br><br>
                 
                 <label style="font-size: 22px;"><b>year</b>  </label>
-                <input class="year" type = 'text' name = 'year' id='year'/>
+                <select class="year" type = 'text' name = 'year' id='year'/>
+                    <option value="blank">SELECT</option>
+                    <option value="year1">{{year1}}</option>
+                    <option value="year2">{{year2}}</option>
+                    <option value="year3">{{year3}}</option>
+                    <option value="year4">{{year4}}</option>
+                    <option value="year5">{{year5}}</option>
+                    <option value="year6">{{year6}}</option>
+                    <option value="year7">{{year7}}</option>
+                    <option value="year8">{{year8}}</option>
+                    <option value="year9">{{year9}}</option>
+                    <option value="year10">{{year10}}</option>
+                    <option value="year11">{{year11}}</option>
+                    <option value="year12">{{year12}}</option>
+                    <option value="year13">{{year13}}</option>
+                    <option value="year14">{{year14}}</option>
+                    <option value="year15">{{year15}}</option>
+                    <option value="year16">{{year16}}</option>
+                    <option value="year17">{{year17}}</option>
+                    <option value="year18">{{year18}}</option>
+                    <option value="year19">{{year19}}</option>
+                    <option value="year20">{{year20}}</option>
+                </select>
                 <br><br><br>
                 
                 <label style="font-size: 22px;"><b>prof</b>  </label>
-                <input class="prof" type = 'text' name = 'prof' id='depproft'/>
+                <select class="prof" type = 'text' name = 'prof' id='depproft'/>
+                    <option value="blank">SELECT</option>
+                    <option value="prof1">{{prof1}}</option>
+                    <option value="prof2">{{prof2}}</option>
+                    <option value="prof3">{{prof3}}</option>
+                    <option value="prof4">{{prof4}}</option>
+                    <option value="prof5">{{prof5}}</option>
+                    <option value="prof6">{{prof6}}</option>
+                    <option value="prof7">{{prof7}}</option>
+                    <option value="prof8">{{prof8}}</option>
+                    <option value="prof9">{{prof9}}</option>
+                    <option value="prof10">{{prof10}}</option>
+                    <option value="prof11">{{prof11}}</option>
+                    <option value="prof12">{{prof12}}</option>
+                    <option value="prof13">{{prof13}}</option>
+                    <option value="prof14">{{prof14}}</option>
+                    <option value="prof15">{{prof15}}</option>
+                    <option value="prof16">{{prof16}}</option>
+                    <option value="prof17">{{prof17}}</option>
+                    <option value="prof18">{{prof18}}</option>
+                    <option value="prof19">{{prof19}}</option>
+                    <option value="prof20">{{prof20}}</option>
+                </select>
                 <br><br><br>
                 
                 <input class="submit_button" type = 'submit' dept = 'Login'/>

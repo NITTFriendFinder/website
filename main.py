@@ -30,19 +30,19 @@ mydb = sqlite3.connect(database="database.db", check_same_thread=False)
 mycursor = mydb.cursor()
 
 # mycursor.execute("DROP TABLE question_paper")
-mycursor.execute("CREATE TABLE IF NOT EXISTS question_paper(u_id INT, year VARCHAR(4), dept VARCHAR(10), prof VARCHAR(20), courseID VARCHAR(5), exam VARCHAR(10), link VARCHAR(30))")
+mycursor.execute("CREATE TABLE IF NOT EXISTS question_paper(u_id INT, sem VARCAHR(2), dept VARCHAR(10), courseid VARCHAR(5), exam VARCHAR(10), year VARCHAR(4), prof VARCHAR(20), link VARCHAR(50))")
 
 
-mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("1", "2022", "CSE", "MAIR31", "jitraj", "CT1", "https://drive.google.com/file/d/1_hg8BL9FpM924UCJpws_sUf-j46J0A48/view?usp=share_link")''')
-mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("2", "2022", "CSE", "CSPE32", "sitara", "CT1", "https://drive.google.com/file/d/1_7XUj-HucGRv-j-2hyW0ZtFTJOoIUMZf/view?usp=share_link")''')
-mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("3", "2022", "CSE", "CSPC33", "", "CT1", "https://drive.google.com/file/d/1ttEagKvyW5evtcaezON31QHq24UckXzy/view?usp=share_link")''')
-mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("4", "2022", "CSE", "CSPC32", "sai krishna", "CT1", "https://drive.google.com/file/d/1hO5JU9CDU9Ujatn2IsqXNocVtS-hPYg3/view?usp=share_link")''')
-mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("5", "2022", "CSE", "CSPC34", "", "CT1", "https://drive.google.com/file/d/1NckMlLJe2TBn-SKGwlS6LLVYu8fVkGk_/view?usp=share_link")''')
-mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("6", "2022", "CSE", "CSPC31", "bala krishna", "CT1", "https://drive.google.com/file/d/108YTU5S-SIo55wWCsNPMIhEGmJMGzMR6/view?usp=share_link")''')
-mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("7", "2022", "CSE", "CSPC34", "", "CT2", "https://drive.google.com/file/d/1rOqrjpExJvIxx3BgFldnupxjKPWtBsGF/view?usp=share_link")''')
-mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("8", "2022", "CSE", "CSPC33", "", "CT2", "https://drive.google.com/file/d/1MXNx7KL_AdHvW0o95l4U5N0QhZaZu9FF/view?usp=share_link")''')
-mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("9", "2022", "CSE", "CSPE32", "sitara", "CT2", "https://drive.google.com/file/d/16KEhFB8Js69BB6-wAcBteYkj5kpx4yio/view?usp=share_link")''')
-mycursor.execute('''INSERT INTO question_paper(u_id, year, dept, prof, courseID, exam, link) VALUES ("10", "2022", "CSE", "CSPC31", "bala krishna", "CT2", "https://drive.google.com/file/d/1-SEWDK1269X1HCCISP4l1aunjcLi1ppj/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, sem, dept, courseID, exam, year, prof, link) VALUES ("1", "3", "CSE", "MAIR31", "CT1", "2022", "jitraj", "https://drive.google.com/file/d/1_hg8BL9FpM924UCJpws_sUf-j46J0A48/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, sem, dept, courseID, exam, year, prof, link) VALUES ("2", "3", "CSE", "CSPE32", "CT1", "2022", "sitara", "https://drive.google.com/file/d/1_7XUj-HucGRv-j-2hyW0ZtFTJOoIUMZf/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, sem, dept, courseID, exam, year, prof, link) VALUES ("3", "3", "CSE", "CSPC33", "CT1", "2022", "", "https://drive.google.com/file/d/1ttEagKvyW5evtcaezON31QHq24UckXzy/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, sem, dept, courseID, exam, year, prof, link) VALUES ("4", "3", "CSE", "CSPC32", "CT1", "2022", "sai krishna", "https://drive.google.com/file/d/1hO5JU9CDU9Ujatn2IsqXNocVtS-hPYg3/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, sem, dept, courseID, exam, year, prof, link) VALUES ("5", "3", "CSE", "CSPC34", "CT1", "2022", "", "https://drive.google.com/file/d/1NckMlLJe2TBn-SKGwlS6LLVYu8fVkGk_/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, sem, dept, courseID, exam, year, prof, link) VALUES ("6", "3", "CSE", "CSPC31", "CT1", "2022", "bala krishna", "https://drive.google.com/file/d/108YTU5S-SIo55wWCsNPMIhEGmJMGzMR6/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, sem, dept, courseID, exam, year, prof, link) VALUES ("7", "3", "CSE", "CSPC34", "CT2", "2022", "", "https://drive.google.com/file/d/1rOqrjpExJvIxx3BgFldnupxjKPWtBsGF/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, sem, dept, courseID, exam, year, prof, link) VALUES ("8", "3", "CSE", "CSPC33", "CT2", "2022", "", "https://drive.google.com/file/d/1MXNx7KL_AdHvW0o95l4U5N0QhZaZu9FF/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, sem, dept, courseID, exam, year, prof, link) VALUES ("9", "3", "CSE", "CSPE32", "CT2", "2022", "sitara", "https://drive.google.com/file/d/16KEhFB8Js69BB6-wAcBteYkj5kpx4yio/view?usp=share_link")''')
+mycursor.execute('''INSERT INTO question_paper(u_id, sem, dept, courseID, exam, year, prof, link) VALUES ("10", "3", "CSE", "CSPC31", "CT2", "2022", "bala krishna", "https://drive.google.com/file/d/1-SEWDK1269X1HCCISP4l1aunjcLi1ppj/view?usp=share_link")''')
 mydb.commit()
 
 
@@ -61,6 +61,16 @@ def hello_world():
 @app.route('/qp', methods=["GET", "POST"])
 def prev_papers():
     if request.method == "GET":
+        # final = []
+        mycursor.execute("SELECT DISTINCT semester FROM question_paper")
+        sem = list(mydb.fetchall())
+        mycursor.execute("SELECT DISTINCT year FROM question_paper")
+        year = list(mydb.fetchall())
+        mycursor.execute("SELECT DISTINCT prof FROM question_paper")
+        prof = list(mydb.fetchall())
+        mycursor.execute("SELECT DISTINCT coursid FROM question_paper")
+        courseid = list(mydb.fetchall())
+        
         return render_template("qp_GET.html")
     if request.method == "POST":
         dept = request.form.get('dept')
@@ -69,20 +79,23 @@ def prev_papers():
         year = request.form.get('year')
         prof = request.form.get('prof')
         mycursor.execute("SELECT * FROM question_paper")
-        mydb.commit()
+        # mydb.commit()
         
-        final = list(mycursor.fetchall())
-        # final = []
+        # final = list(mycursor.fetchall())
+        final = []
+        ######################
+        # need to make changes in the code to enable parameter checking
+
         for i in list(mycursor.fetchall()):
-            if dept == i[2]:
+            if dept!="" and dept == i[2]:
                 final.append(i)
-            if courseid == i[3]:
+            if courseid!="" and courseid == i[3]:
                 final.append(i)
-            if exam == i[4]:
+            if exam!="" and exam == i[4]:
                 final.append(i)
-            if year == i[5]:
+            if year!="" and year == i[5]:
                 final.append(i)
-            if prof in i[6]:
+            if year!="" and year in i[6]:
                 final.append(i)
 
         f = open("before_value.bin", "wb")
